@@ -31,8 +31,6 @@ public final class DrivingLicenceGeneratorService {
         }
     }
 
-    //Poser question, a t'on le droit de faire appel à save et isDriverSocialSecurityNumberOk dans cette méthode ?
-    //CreateSaveAndReturn ??
     public DrivingLicence saveDrivingLicence(String driverSocialSecurityNumber) {
         if (socialSecurityCheckService.isValid(driverSocialSecurityNumber)) {
                 DrivingLicence drivingLicenceCreated = createDrivingLicence(driverSocialSecurityNumber) ;
