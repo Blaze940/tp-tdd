@@ -36,7 +36,7 @@ public final class SocialSecurityCheckService {
     }
     public boolean isValid(String driverSocialSecurityNumber) {
 
-        if(!isEmpty(driverSocialSecurityNumber)) {
+        if(isEmpty(driverSocialSecurityNumber)) {
             throw new InvalidDriverSocialSecurityNumberException("Social security number shouldn't be empty");
         }
         if(!hasGoodLength(driverSocialSecurityNumber)) {
