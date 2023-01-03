@@ -13,6 +13,7 @@ public class DrivingLicenceFinderService {
     private final InMemoryDatabase database;
 
     public Optional<DrivingLicence> findById(UUID drivingLicenceId) {
-
+        //Empty return for the moment because we will implement it in the next step
+        return Optional.empty();
     }
 }
