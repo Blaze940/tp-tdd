@@ -40,9 +40,4 @@ public final class DrivingLicenceGeneratorService {
         return null;
     }
 
-
-   /* public DrivingLicence getCreatedDrivingLicence() {
-        return drivingLicenceCreated ;
-    }*/
-
 }
