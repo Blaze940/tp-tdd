@@ -1,6 +1,7 @@
 package fr.esgi.cleancode.service;
 
 import fr.esgi.cleancode.database.InMemoryDatabase;
+import fr.esgi.cleancode.exception.ResourceNotFoundException;
 import fr.esgi.cleancode.model.DrivingLicence;
 import lombok.RequiredArgsConstructor;
 
@@ -13,7 +14,10 @@ public class DrivingLicenceFinderService {
     private final InMemoryDatabase database;
 
     public Optional<DrivingLicence> findById(UUID drivingLicenceId) {
-        //Empty return for the moment because we will implement it in the next step
-        return Optional.empty();
+        return Optional.ofNullable(
+                database.findById(drivingLicenceId).orElseThrow(
+                        () -> new ResourceNotFoundException("No driving licence found with this id")
+                )
+        );
     }
 }
