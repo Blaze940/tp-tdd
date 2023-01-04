@@ -1,6 +1,5 @@
 package fr.esgi.cleancode.service;
 
-import fr.esgi.cleancode.database.InMemoryDatabase;
 import fr.esgi.cleancode.model.DrivingLicence;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -23,9 +22,6 @@ public class DrivingLicencePointsHandlerServiceTest {
 
     @Mock
     private DrivingLicenceFinderService service;
-
-    @Mock
-    private InMemoryDatabase database;
 
     private final int MAX_DRIVING_LICENCE_POINTS = 12;
     
